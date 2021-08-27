@@ -45,3 +45,16 @@ const handleScrollAnimation = () => {
 window.addEventListener("scroll", () => { 
   handleScrollAnimation();
 });
+
+// Delay waktu sebelum animasi jalan
+const timerElements = document.querySelectorAll(".js-timer");
+
+const handleTimerAnimation = () => {
+  timerElements.forEach((el) => {
+    displayScrollElement(el);
+  });
+}
+
+window.addEventListener("load", () => { 
+    setTimeout(handleTimerAnimation, 2000);
+});
